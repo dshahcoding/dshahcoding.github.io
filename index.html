@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Lato&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+     <div class="bluebox">
+        <div class="whitebox">
+            <img id="image" src="photos/quotes_img-removebg-preview.png" alt="Img not found">
+            <div id="quotes"></div>
+            <div id="author"></div>
+            <button id="newQ">New Quotes</button>
+        </div>  
+     </div>
+
+
+     
+    <script>
+        const quotes = document.getElementById("quotes");
+        const author = document.getElementById("author");
+        const newQ = document.getElementById("newQ");
+        let realData = "";
+        let quotesData = "";
+
+        const getNewQuotes = () => {
+            let rnum = Math.floor(Math.random() * 30);
+            quotesData = realData[rnum];
+
+            quotes.innerText = `${quotesData.text}`;
+
+            quotesData.author == null ? (author.innerText = "By unKnown") : (author.innerText = `By ${quotesData.author}`);
+
+            // author.innerHTML = `${quotesData[rnum].author}`;
+
+        }
+
+        const getQuotes = async () => {
+            const api = "https://type.fit/api/quotes";
+            try {
+                let data = await fetch(api);
+                realData = await data.json();
+
+                //  console.log(realData);
+                //  console.log(realData[0]);
+
+                getNewQuotes();
+                //  console.log(realData.length);
+                //  console.log(realData[0].author);
+            }
+            catch (error) {
+
+            }
+        }
+
+        newQ.addEventListener("click", getNewQuotes);
+        getQuotes();
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+    background-color: rgb(63, 63, 84);
+}
+
+.bluebox {
+    margin-left: 28%;
+    height: 80vh;
+    width: 90vh;
+    background-color: rgb(108, 148, 203);
+    margin-top: 4.6%;
+    position: fixed;
+}
+
+@media only screen and (max-width:441px) {
+    .bluebox {
+        display: flex;
+        height: 80vh;
+        width: 50vh;
+        background-color: rgb(108, 148, 203);
+        position: relative;
+        margin: auto;
+        margin-top: 10%;
+    }
+}
+
+.whitebox {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 70vh;
+    position: relative;
+    background-color: rgb(251, 252, 255);
+    margin: auto;
+    margin-top: 10.6%;
+}
+
+
+@media only screen and (max-width:440px) {
+    .whitebox {
+        /* display: flex; */
+        height: 71vh;
+        width: 40vh;
+        position: relative;
+        background-color: rgb(251, 252, 255);
+        margin: auto;
+        margin-top: 9%;
+    }
+}
+
+#image{
+    width:100px;
+    height:100px;
+    margin:6% 0% 0% 5%;
+}
+
+@media only screen and (max-width:440px) {
+  
+#image{
+    width:50px;
+    height:50px;
+    margin:6% 0% 0% 4%;
+}
+}
+
+#newQ{
+    margin:54% 0% 0% 0%;
+    padding:2% 0%;
+    background-color: blue;
+    color:#fff;
+    font-family: cursive;  
+}
+
+button{
+    border:none;
+}
+
+@media only screen and (max-width:440px) {
+  
+    #newQ{
+        margin:138% 0% 0% 0%;
+        padding:4% 0%;
+        background-color: blue;
+        color: #fff;
+        font-family: cursive;   
+    }
+    button{
+        border:none;
+    }
+
+    }
+
+
+#quotes{
+    color:black;
+    font-weight: bolder;
+    font-size:x-large;
+    font-family: 'Dancing Script', cursive;
+    margin:34% 4% 10% 8%;
+    position:absolute;
+}
+
+@media only screen and (max-width:440px) {
+  
+    #quotes{
+        color:black;
+        font-weight: bolder;
+        font-size:x-large;
+        font-family: 'Dancing Script', cursive;
+        padding:14% 7% 0% 5%;
+        position:absolute;
+    }
+    } 
+
+
+    #author{
+        color:black;
+        font-weight: bolder;
+        font-size:large;
+        font-family: 'ubuntu';
+        margin:54% 1% 0% 50%;
+        position:absolute;
+    }
+    
+    @media only screen and (max-width:440px) {
+      
+        #author{
+            color:black;
+            font-weight: bolder;
+            font-size:large;
+            font-family: 'ubuntu';
+            margin:124% 2% 0% 30%;
+        }
+        } 
